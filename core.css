@@ -14,6 +14,8 @@ body {
 a { color: var(--theme-accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+h1, h2, h3, h4, h5, h6 { font-family: var(--theme-font-display); }
+
 /* ─── Layout ─────────────────────────────────────────────────────── */
 .page-header {
   padding: 1.5rem 2rem;
@@ -25,7 +27,6 @@ a:hover { text-decoration: underline; }
 }
 
 .page-header h1 {
-  font-family: var(--theme-font-display);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -55,7 +56,6 @@ section > header {
   /* negative bleed: pull header back to section edges, add its own border */
   margin: -1.25rem -1.25rem 1.25rem;
   padding: 1rem 1.25rem;
-  border-bottom: 1px solid var(--theme-section-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +63,6 @@ section > header {
 }
 
 section > header h1 {
-  font-family: var(--theme-font-display);
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -85,9 +84,10 @@ ul.item-list li.item {
   border: 1px solid var(--theme-item-border);
   border-radius: 6px;
   padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
   transition: background 0.15s;
 }
 
@@ -95,21 +95,23 @@ ul.item-list li.item:hover {
   background: var(--theme-item-hover-bg);
 }
 
-
-.item-body {
-  flex: 1;
-  min-width: 0;
-}
-
-.item-name {
+ul.item-list li.item h1 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 1rem;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.item-name a {
+ul.item-list li.item h1 a {
   color: inherit;
+}
+
+ul.item-list li.item .item-meta {
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .item-meta {
@@ -138,9 +140,11 @@ ul.item-list li.item:hover {
 .badge-fallen { background: var(--theme-badge-fallen-bg); color: var(--theme-badge-fallen-fg); border: 1px solid var(--theme-badge-fallen-border); }
 
 .item-actions {
+  grid-column: 2;
+  grid-row: 1 / 3;
   display: flex;
+  align-self: center;
   gap: 0.4rem;
-  flex-shrink: 0;
 }
 
 /* ─── Buttons ────────────────────────────────────────────────────── */

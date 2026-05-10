@@ -1,18 +1,20 @@
 /* ─── Font loading ───────────────────────────────────────────────── */
 @import url('https://fonts.cdnfonts.com/css/adamcg-pro');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
 
 /* ─── Font palette ───────────────────────────────────────────────── */
 :root {
-  --font-adam-cg-pro: 'ADAM.CG PRO', 'Futura', 'Century Gothic', sans-serif;
-  --font-palatino:    Palatino Linotype, Palatino, 'Book Antiqua', serif;
+  --font-adam-cg-pro:   'ADAM.CG PRO', 'Futura', 'Century Gothic', sans-serif;
+  --font-josefin-sans:  'Josefin Sans', 'Futura', 'Century Gothic', sans-serif;
+  --font-palatino:      Palatino Linotype, Palatino, 'Book Antiqua', serif;
 }
 
 /* ─── Semantic font mappings ─────────────────────────────────────── */
 :root {
-  --theme-font-display: var(--font-adam-cg-pro);
+  --theme-font-display: var(--font-josefin-sans);
   --theme-font-body:    var(--font-palatino);
   --theme-font-ui:      var(--font-palatino);
-  --theme-font-btn:            var(--font-adam-cg-pro);
+  --theme-font-btn:            var(--font-josefin-sans);
   --theme-font-badge:          var(--font-adam-cg-pro);
   --theme-btn-text-transform:  none;
 }
@@ -31,8 +33,9 @@
   --color-parchment-section:#E9E3DA;
   --color-parchment-item:   #EEE9E2;
 
-  /* border */
+  /* border + button */
   --color-navy:             #1C2B4A;
+  --color-navy-light:       #2A3F6A;
 
   /* accent colours */
   --color-cobalt:           #1A4FAA;
@@ -80,16 +83,16 @@
   --theme-btn-border:    var(--color-navy);
   --theme-btn-hover-bg:  var(--color-parchment-hover);
 
-  --theme-btn-primary-bg:     var(--color-parchment-btn);
-  --theme-btn-primary-fg:     var(--color-ink);
+  --theme-btn-primary-bg:     var(--color-navy);
+  --theme-btn-primary-fg:     var(--color-parchment-item);
   --theme-btn-primary-border: var(--color-navy);
-  --theme-btn-primary-hover:  var(--color-parchment-hover);
+  --theme-btn-primary-hover:  var(--color-navy-light);
 
   --theme-btn-danger-bg:     var(--color-crimson);
   --theme-btn-danger-fg:     var(--color-offwhite);
   --theme-btn-danger-hover:  var(--color-crimson-dark);
 
-  --theme-input-bg:      var(--color-parchment-item);
+  --theme-input-bg:      var(--color-parchment);
   --theme-input-fg:      var(--color-ink);
   --theme-input-border:  var(--color-navy);
   --theme-input-focus-border: var(--color-cobalt);
