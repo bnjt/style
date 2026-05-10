@@ -1,0 +1,40 @@
+/* ─── Semantic mappings: Light Side ─────────────────────────────── */
+[data-theme="light"] {
+  --theme-bg:            var(--color-light);
+  --theme-fg:            var(--color-void);
+  --theme-border:        #d1d5db;
+  --theme-muted:         var(--color-dust);
+
+  --theme-section-bg:    var(--color-white);
+  --theme-section-fg:    var(--color-void);
+  --theme-section-border:#d1d5db;
+  --theme-section-heading-fg: var(--color-jedi-blue-dark);
+
+  --theme-item-bg:       #f9fafb;
+  --theme-item-fg:       var(--color-void);
+  --theme-item-border:   #e5e7eb;
+  --theme-item-hover-bg: #f3f4f6;
+  --theme-item-meta-fg:  var(--color-dust);
+
+  --theme-btn-bg:        #e5e7eb;
+  --theme-btn-fg:        var(--color-void);
+  --theme-btn-border:    #d1d5db;
+  --theme-btn-hover-bg:  #d1d5db;
+
+  --theme-btn-primary-bg:     var(--color-jedi-blue);
+  --theme-btn-primary-border: transparent;
+  --theme-btn-primary-hover:  #2563eb;
+
+  --theme-btn-danger-bg:    var(--color-sith-red);
+  --theme-btn-danger-hover: #b91c1c;
+
+  --theme-input-bg:      var(--color-white);
+  --theme-input-fg:      var(--color-void);
+  --theme-input-border:  #d1d5db;
+  --theme-input-focus-border: var(--color-jedi-blue);
+  --theme-input-placeholder: #9ca3af;
+
+  --theme-popup-bg:      var(--color-white);
+  --theme-popup-fg:      var(--color-void);
+  --theme-popup-border:  var(--color-jedi-blue);
+}

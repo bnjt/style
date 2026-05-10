@@ -1,0 +1,61 @@
+/* ─── Semantic mappings: Light ───────────────────────────────────── */
+[data-theme="light"] {
+  --theme-bg:            var(--color-parchment);
+  --theme-fg:            var(--color-ink);
+  --theme-border:        var(--color-navy);
+  --theme-accent:        var(--color-cobalt);
+  --theme-muted:         var(--color-ink-muted);
+  --theme-focus-ring:    var(--color-cobalt-glow);
+
+  --theme-section-bg:    var(--color-parchment);
+  --theme-section-fg:    var(--color-ink);
+  --theme-section-border:var(--color-navy);
+  --theme-section-heading-fg: var(--color-ink-mid);
+
+  --theme-item-bg:       var(--color-parchment);
+  --theme-item-fg:       var(--color-ink);
+  --theme-item-border:   var(--color-navy);
+  --theme-item-hover-bg: var(--color-parchment-btn);
+  --theme-item-meta-fg:  var(--color-ink-muted);
+
+  --theme-btn-bg:        var(--color-parchment-btn);
+  --theme-btn-fg:        var(--color-ink);
+  --theme-btn-border:    var(--color-navy);
+  --theme-btn-hover-bg:  var(--color-parchment-hover);
+
+  --theme-btn-primary-bg:     var(--color-navy);
+  --theme-btn-primary-fg:     var(--color-parchment-item);
+  --theme-btn-primary-border: var(--color-navy);
+  --theme-btn-primary-hover:  var(--color-navy-light);
+
+  --theme-btn-danger-bg:     var(--color-crimson);
+  --theme-btn-danger-fg:     var(--color-offwhite);
+  --theme-btn-danger-hover:  var(--color-crimson-dark);
+
+  --theme-input-bg:      var(--color-parchment);
+  --theme-input-fg:      var(--color-ink);
+  --theme-input-border:  var(--color-navy);
+  --theme-input-focus-border: var(--color-cobalt);
+  --theme-input-placeholder: var(--color-ink-muted);
+
+  --theme-popup-bg:      var(--color-parchment-section);
+  --theme-popup-fg:      var(--color-ink);
+  --theme-popup-border:  var(--color-navy);
+  --theme-popup-overlay: #1C2B4A55;
+
+  --theme-badge-jedi-bg:      var(--color-navy-glow);
+  --theme-badge-jedi-fg:      var(--color-navy);
+  --theme-badge-jedi-border:  var(--color-navy);
+
+  --theme-badge-sith-bg:      var(--color-crimson-glow);
+  --theme-badge-sith-fg:      var(--color-crimson);
+  --theme-badge-sith-border:  var(--color-crimson);
+
+  --theme-badge-alive-bg:     var(--color-forest-glow);
+  --theme-badge-alive-fg:     var(--color-forest);
+  --theme-badge-alive-border: var(--color-forest);
+
+  --theme-badge-fallen-bg:     var(--color-amber-glow);
+  --theme-badge-fallen-fg:     var(--color-amber);
+  --theme-badge-fallen-border: var(--color-amber);
+}
