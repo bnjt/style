@@ -1,0 +1,126 @@
+/* ─── Primitive palette ───────────────────────────────────────────── */
+:root {
+  --color-void:          #0a0a0f;
+  --color-deep-space:    #111827;
+  --color-nebula:        #1f2937;
+  --color-starfield:     #374151;
+  --color-dust:          #6b7280;
+  --color-mist:          #9ca3af;
+  --color-light:         #f3f4f6;
+  --color-white:         #ffffff;
+
+  --color-sith-red:      #dc2626;
+  --color-sith-red-dark: #7f1d1d;
+  --color-sith-red-glow: #ef444440;
+
+  --color-jedi-blue:     #3b82f6;
+  --color-jedi-blue-dark:#1e3a5f;
+  --color-jedi-blue-glow:#3b82f640;
+
+  --color-force-green:   #22c55e;
+  --color-force-green-dk:#14532d;
+
+  --color-gold:          #fbbf24;
+  --color-gold-dark:     #78350f;
+}
+
+/* ─── Semantic mappings: Dark Side (default) ─────────────────────── */
+:root {
+  --theme-bg:            var(--color-void);
+  --theme-fg:            var(--color-light);
+  --theme-border:        var(--color-starfield);
+  --theme-accent:        var(--color-jedi-blue);
+  --theme-muted:         var(--color-dust);
+  --theme-focus-ring:    var(--color-jedi-blue-glow);
+
+  --theme-section-bg:    var(--color-deep-space);
+  --theme-section-fg:    var(--color-light);
+  --theme-section-border:var(--color-starfield);
+  --theme-section-heading-fg: var(--color-gold);
+
+  --theme-item-bg:       var(--color-nebula);
+  --theme-item-fg:       var(--color-light);
+  --theme-item-border:   var(--color-starfield);
+  --theme-item-hover-bg: var(--color-starfield);
+  --theme-item-meta-fg:  var(--color-mist);
+
+  --theme-btn-bg:        var(--color-starfield);
+  --theme-btn-fg:        var(--color-light);
+  --theme-btn-border:    var(--color-dust);
+  --theme-btn-hover-bg:  var(--color-dust);
+
+  --theme-btn-primary-bg:    var(--color-jedi-blue);
+  --theme-btn-primary-fg:    var(--color-white);
+  --theme-btn-primary-hover: var(--color-jedi-blue-dark);
+
+  --theme-btn-danger-bg:     var(--color-sith-red);
+  --theme-btn-danger-fg:     var(--color-white);
+  --theme-btn-danger-hover:  var(--color-sith-red-dark);
+
+  --theme-input-bg:      var(--color-nebula);
+  --theme-input-fg:      var(--color-light);
+  --theme-input-border:  var(--color-starfield);
+  --theme-input-focus-border: var(--color-jedi-blue);
+  --theme-input-placeholder: var(--color-dust);
+
+  --theme-popup-bg:      var(--color-deep-space);
+  --theme-popup-fg:      var(--color-light);
+  --theme-popup-border:  var(--color-gold);
+  --theme-popup-overlay: #00000099;
+
+  --theme-badge-jedi-bg:     var(--color-jedi-blue-glow);
+  --theme-badge-jedi-fg:     var(--color-jedi-blue);
+  --theme-badge-jedi-border: var(--color-jedi-blue);
+
+  --theme-badge-sith-bg:     var(--color-sith-red-glow);
+  --theme-badge-sith-fg:     var(--color-sith-red);
+  --theme-badge-sith-border: var(--color-sith-red);
+
+  --theme-badge-alive-bg:     var(--color-force-green-dk);
+  --theme-badge-alive-fg:     var(--color-force-green);
+  --theme-badge-alive-border: var(--color-force-green);
+
+  --theme-badge-fallen-bg:     var(--color-gold-dark);
+  --theme-badge-fallen-fg:     var(--color-gold);
+  --theme-badge-fallen-border: var(--color-gold);
+}
+
+/* ─── Semantic mappings: Light Side override ─────────────────────── */
+[data-theme="light"] {
+  --theme-bg:            var(--color-light);
+  --theme-fg:            var(--color-void);
+  --theme-border:        #d1d5db;
+  --theme-muted:         var(--color-dust);
+
+  --theme-section-bg:    var(--color-white);
+  --theme-section-fg:    var(--color-void);
+  --theme-section-border:#d1d5db;
+  --theme-section-heading-fg: var(--color-jedi-blue-dark);
+
+  --theme-item-bg:       #f9fafb;
+  --theme-item-fg:       var(--color-void);
+  --theme-item-border:   #e5e7eb;
+  --theme-item-hover-bg: #f3f4f6;
+  --theme-item-meta-fg:  var(--color-dust);
+
+  --theme-btn-bg:        #e5e7eb;
+  --theme-btn-fg:        var(--color-void);
+  --theme-btn-border:    #d1d5db;
+  --theme-btn-hover-bg:  #d1d5db;
+
+  --theme-btn-primary-bg:    var(--color-jedi-blue);
+  --theme-btn-primary-hover: #2563eb;
+
+  --theme-btn-danger-bg:     var(--color-sith-red);
+  --theme-btn-danger-hover:  #b91c1c;
+
+  --theme-input-bg:      var(--color-white);
+  --theme-input-fg:      var(--color-void);
+  --theme-input-border:  #d1d5db;
+  --theme-input-focus-border: var(--color-jedi-blue);
+  --theme-input-placeholder: #9ca3af;
+
+  --theme-popup-bg:      var(--color-white);
+  --theme-popup-fg:      var(--color-void);
+  --theme-popup-border:  var(--color-jedi-blue);
+}
