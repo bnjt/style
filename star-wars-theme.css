@@ -1,3 +1,18 @@
+/* ─── Font palette ───────────────────────────────────────────────── */
+:root {
+  --font-system: system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Semantic font mappings ─────────────────────────────────────── */
+:root {
+  --theme-font-display: var(--font-system);
+  --theme-font-body:    var(--font-system);
+  --theme-font-ui:      var(--font-system);
+  --theme-font-btn:            var(--font-system);
+  --theme-font-badge:          var(--font-system);
+  --theme-btn-text-transform:  none;
+}
+
 /* ─── Primitive palette ───────────────────────────────────────────── */
 :root {
   --color-void:          #0a0a0f;

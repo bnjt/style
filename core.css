@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--theme-font-body);
   font-size: 1rem;
   line-height: 1.5;
   background: var(--theme-bg);
@@ -25,6 +25,7 @@ a:hover { text-decoration: underline; }
 }
 
 .page-header h1 {
+  font-family: var(--theme-font-display);
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -62,6 +63,7 @@ section > header {
 }
 
 section > header h1 {
+  font-family: var(--theme-font-display);
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -132,10 +134,11 @@ ul.item-list li.item:hover {
 
 .badge {
   display: inline-block;
-  padding: 0.1em 0.5em;
+  padding: 0.35em 0.7em 0.25em;
   border-radius: 999px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 600;
+  font-family: var(--theme-font-badge);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -156,7 +159,7 @@ button, .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  padding: 0.4em 0.85em;
+  padding: 0.5em 0.85em 0.4em;
   font-size: 0.85rem;
   font-weight: 500;
   border-radius: 5px;
@@ -166,7 +169,8 @@ button, .btn {
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
-  font-family: inherit;
+  font-family: var(--theme-font-btn);
+  text-transform: var(--theme-btn-text-transform);
 }
 
 button:hover, .btn:hover {
@@ -230,7 +234,7 @@ select {
   border-radius: 5px;
   padding: 0.45em 0.75em;
   font-size: 0.9rem;
-  font-family: inherit;
+  font-family: var(--theme-font-ui);
   width: 100%;
   transition: border-color 0.15s;
 }

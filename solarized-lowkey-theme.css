@@ -1,3 +1,22 @@
+/* ─── Font loading ───────────────────────────────────────────────── */
+@import url('https://fonts.cdnfonts.com/css/adamcg-pro');
+
+/* ─── Font palette ───────────────────────────────────────────────── */
+:root {
+  --font-adam-cg-pro: 'ADAM.CG PRO', 'Futura', 'Century Gothic', sans-serif;
+  --font-palatino:    Palatino Linotype, Palatino, 'Book Antiqua', serif;
+}
+
+/* ─── Semantic font mappings ─────────────────────────────────────── */
+:root {
+  --theme-font-display: var(--font-adam-cg-pro);
+  --theme-font-body:    var(--font-palatino);
+  --theme-font-ui:      var(--font-palatino);
+  --theme-font-btn:            var(--font-adam-cg-pro);
+  --theme-font-badge:          var(--font-adam-cg-pro);
+  --theme-btn-text-transform:  none;
+}
+
 /* ─── Primitive palette ───────────────────────────────────────────── */
 :root {
   /* text */
@@ -18,6 +37,8 @@
   /* accent colours */
   --color-cobalt:           #1A4FAA;
   --color-cobalt-glow:      #1A4FAA1A;
+
+  --color-navy-glow:        #1C2B4A1A;
 
   --color-crimson:          #8B1A1A;
   --color-crimson-dark:     #6B1414;
@@ -79,9 +100,9 @@
   --theme-popup-border:  var(--color-navy);
   --theme-popup-overlay: #1C2B4A55;
 
-  --theme-badge-jedi-bg:      var(--color-cobalt-glow);
-  --theme-badge-jedi-fg:      var(--color-cobalt);
-  --theme-badge-jedi-border:  var(--color-cobalt);
+  --theme-badge-jedi-bg:      var(--color-navy-glow);
+  --theme-badge-jedi-fg:      var(--color-navy);
+  --theme-badge-jedi-border:  var(--color-navy);
 
   --theme-badge-sith-bg:      var(--color-crimson-glow);
   --theme-badge-sith-fg:      var(--color-crimson);
