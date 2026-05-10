@@ -52,18 +52,11 @@ themeBtn.addEventListener('click', () => {
 
 // ─── Popups ───────────────────────────────────────────────────────
 
-const charInfo = {
-  'Luke Skywalker':    'Born on Polis Massa, raised on Tatooine. Trained by Obi-Wan Kenobi and Yoda. Destroyed the first Death Star. Redeemed his father Darth Vader. Later founded the New Jedi Order.',
-  'Yoda':              'Grand Master of the Jedi Order for centuries. Known for his mastery of the Force and inverted syntax. Survived Order 66 and lived in exile on Dagobah.',
-  'Obi-Wan Kenobi':   'Apprentice to Qui-Gon Jinn, master to Anakin Skywalker. One of the most respected Jedi of his era. Went into exile on Tatooine to watch over Luke.',
-  'Darth Vader':       "Born Anakin Skywalker, hailed as the Chosen One. Fell to the dark side and became Emperor Palpatine's enforcer. Ultimately redeemed by his son Luke.",
-  'Emperor Palpatine': 'Darth Sidious in public disguise. Orchestrated the Clone Wars, destroyed the Jedi Order, and ruled the galaxy as Emperor. Struck down by Darth Vader.',
-};
-
 function showPopup(type, name) {
   if (type === 'char-info') {
+    const infoEl = document.querySelector(`[data-char="${name}"] .info-content`);
     document.getElementById('popupTitle').textContent = name;
-    document.getElementById('popupBody').textContent = charInfo[name] ?? 'No data on record.';
+    document.getElementById('popupBody').textContent = infoEl ? infoEl.textContent : 'No data on record.';
     document.getElementById('infoPopup').classList.add('active');
   } else if (type === 'add-jedi') {
     document.getElementById('addJediPopup').classList.add('active');
