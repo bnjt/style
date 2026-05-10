@@ -95,17 +95,6 @@ ul.item-list li.item:hover {
   background: var(--theme-item-hover-bg);
 }
 
-.item-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: var(--theme-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
 
 .item-body {
   flex: 1;
