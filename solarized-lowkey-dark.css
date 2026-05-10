@@ -22,10 +22,8 @@
 /* ─── Primitive palette ───────────────────────────────────────────── */
 :root {
   /* dark background scale */
-  --color-bark:             #1E1610;
-  --color-bark-raised:      #281C14;
-  --color-bark-btn:         #1C2B4A;
-  --color-bark-btn-hover:   #2A3F6A;
+  --color-navy-deep:        #0F1A2E;
+  --color-navy-border:      #2E4470;
 
   /* light background scale (used by light variant) */
   --color-parchment-btn:    #CABCAC;
@@ -68,48 +66,48 @@
 
 /* ─── Semantic mappings: Dark ────────────────────────────────────── */
 :root {
-  --theme-bg:            var(--color-bark);
+  --theme-bg:            var(--color-navy-deep);
   --theme-fg:            var(--color-cream);
-  --theme-border:        var(--color-navy);
+  --theme-border:        var(--color-amber);
   --theme-accent:        var(--color-cobalt);
   --theme-muted:         var(--color-cream-muted);
   --theme-focus-ring:    var(--color-cobalt-glow);
 
-  --theme-section-bg:    var(--color-bark-raised);
+  --theme-section-bg:    var(--color-navy);
   --theme-section-fg:    var(--color-cream);
-  --theme-section-border:var(--color-navy);
+  --theme-section-border:var(--color-amber);
   --theme-section-heading-fg: var(--color-amber);
 
-  --theme-item-bg:       var(--color-bark-raised);
+  --theme-item-bg:       var(--color-navy);
   --theme-item-fg:       var(--color-cream);
-  --theme-item-border:   var(--color-navy);
-  --theme-item-hover-bg: var(--color-bark-btn);
+  --theme-item-border:   var(--color-amber);
+  --theme-item-hover-bg: var(--color-navy-light);
   --theme-item-meta-fg:  var(--color-cream-muted);
 
   --theme-btn-bg:        var(--color-parchment-btn);
   --theme-btn-fg:        var(--color-ink);
-  --theme-btn-border:    var(--color-navy);
+  --theme-btn-border:    var(--color-parchment-btn);
   --theme-btn-hover-bg:  var(--color-parchment-hover);
 
-  --theme-btn-primary-bg:     var(--color-navy);
-  --theme-btn-primary-fg:     var(--color-parchment-item);
-  --theme-btn-primary-border: var(--color-navy);
-  --theme-btn-primary-hover:  var(--color-navy-light);
+  --theme-btn-primary-bg:     var(--color-parchment-btn);
+  --theme-btn-primary-fg:     var(--color-ink);
+  --theme-btn-primary-border: var(--color-parchment-btn);
+  --theme-btn-primary-hover:  var(--color-parchment-hover);
 
   --theme-btn-danger-bg:     var(--color-crimson);
   --theme-btn-danger-fg:     var(--color-offwhite);
   --theme-btn-danger-hover:  var(--color-crimson-dark);
 
-  --theme-input-bg:      var(--color-bark-raised);
+  --theme-input-bg:      var(--color-navy);
   --theme-input-fg:      var(--color-cream);
-  --theme-input-border:  var(--color-navy);
-  --theme-input-focus-border: var(--color-cobalt);
+  --theme-input-border:  var(--color-amber);
+  --theme-input-focus-border: var(--color-parchment);
   --theme-input-placeholder: var(--color-cream-muted);
 
-  --theme-popup-bg:      var(--color-bark-raised);
+  --theme-popup-bg:      var(--color-navy);
   --theme-popup-fg:      var(--color-cream);
-  --theme-popup-border:  var(--color-navy);
-  --theme-popup-overlay: #0A080599;
+  --theme-popup-border:  var(--color-amber);
+  --theme-popup-overlay: #0F1A2E99;
 
   --theme-badge-jedi-bg:      var(--color-navy-glow);
   --theme-badge-jedi-fg:      var(--color-cobalt);
