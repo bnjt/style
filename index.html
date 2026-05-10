@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars — Galactic Registry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Page header ─────────────────────────────────────────────── -->
+  <header class="page-header">
+    <h1>Galactic Registry</h1>
+    <div class="theme-toggle">
+      <span>Dark Side</span>
+      <button class="ghost" id="themeBtn" title="Toggle theme" style="font-size:1.1rem; padding:0.3em 0.5em;">☀️</button>
+      <span>Light Side</span>
+    </div>
+  </header>
+
+  <!-- ── Main content ─────────────────────────────────────────────── -->
+  <main class="page-main">
+
+    <!-- Search / filter bar -->
+    <section>
+      <header>
+        <h1>Search Registry</h1>
+      </header>
+      <form class="form-row" onsubmit="return false">
+        <div class="field">
+          <label for="search">Name or alias</label>
+          <input type="search" id="search" placeholder="e.g. Skywalker…">
+        </div>
+        <div class="field" style="max-width:180px">
+          <label for="affiliation">Affiliation</label>
+          <select id="affiliation">
+            <option value="">All</option>
+            <option>Jedi Order</option>
+            <option>Sith</option>
+            <option>Gray Force</option>
+          </select>
+        </div>
+        <div class="field" style="max-width:160px">
+          <label for="era">Era</label>
+          <select id="era">
+            <option value="">All eras</option>
+            <option>Old Republic</option>
+            <option>Clone Wars</option>
+            <option>Galactic Civil War</option>
+            <option>New Republic</option>
+          </select>
+        </div>
+        <div class="field" style="flex:0">
+          <label>&nbsp;</label>
+          <button class="primary" type="submit">Search</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Jedi section -->
+    <section>
+      <header>
+        <h1>Jedi Characters</h1>
+        <button class="primary" onclick="showPopup('add-jedi')">+ Add Jedi</button>
+      </header>
+      <ul class="item-list">
+
+        <li class="item">
+          <div class="item-avatar">🔵</div>
+          <div class="item-body">
+            <div class="item-name"><a href="#">Luke Skywalker</a></div>
+            <div class="item-meta">
+              <span class="badge badge-jedi">Jedi</span>
+              <span class="badge badge-alive">Active</span>
+              <span>Galactic Civil War · Farm boy → Grand Master</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button onclick="showPopup('char-info', 'Luke Skywalker')" title="Info">ℹ</button>
+            <button class="danger" onclick="confirmDelete('Luke Skywalker')">Delete</button>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item-avatar">🟢</div>
+          <div class="item-body">
+            <div class="item-name"><a href="#">Yoda</a></div>
+            <div class="item-meta">
+              <span class="badge badge-jedi">Jedi</span>
+              <span class="badge badge-fallen">Deceased</span>
+              <span>Old Republic · 900 years old · Grand Master</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button onclick="showPopup('char-info', 'Yoda')" title="Info">ℹ</button>
+            <button class="danger" onclick="confirmDelete('Yoda')">Delete</button>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item-avatar">🔵</div>
+          <div class="item-body">
+            <div class="item-name"><a href="#">Obi-Wan Kenobi</a></div>
+            <div class="item-meta">
+              <span class="badge badge-jedi">Jedi</span>
+              <span class="badge badge-fallen">Deceased</span>
+              <span>Clone Wars · "Hello there"</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button onclick="showPopup('char-info', 'Obi-Wan Kenobi')" title="Info">ℹ</button>
+            <button class="danger" onclick="confirmDelete('Obi-Wan Kenobi')">Delete</button>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Sith section -->
+    <section>
+      <header>
+        <h1>Sith Characters</h1>
+        <button class="primary" onclick="showPopup('add-sith')">+ Add Sith</button>
+      </header>
+      <ul class="item-list">
+
+        <li class="item">
+          <div class="item-avatar">🔴</div>
+          <div class="item-body">
+            <div class="item-name"><a href="#">Darth Vader</a></div>
+            <div class="item-meta">
+              <span class="badge badge-sith">Sith</span>
+              <span class="badge badge-fallen">Redeemed/Deceased</span>
+              <span>Galactic Civil War · Formerly Anakin Skywalker</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button onclick="showPopup('char-info', 'Darth Vader')" title="Info">ℹ</button>
+            <button class="danger" onclick="confirmDelete('Darth Vader')">Delete</button>
+          </div>
+        </li>
+
+        <li class="item">
+          <div class="item-avatar">🔴</div>
+          <div class="item-body">
+            <div class="item-name"><a href="#">Emperor Palpatine</a></div>
+            <div class="item-meta">
+              <span class="badge badge-sith">Sith</span>
+              <span class="badge badge-fallen">Deceased</span>
+              <span>Old Republic → New Republic · Rule of Two</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button onclick="showPopup('char-info', 'Emperor Palpatine')" title="Info">ℹ</button>
+            <button class="danger" onclick="confirmDelete('Emperor Palpatine')">Delete</button>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ── Info popup ────────────────────────────────────────────────── -->
+  <div class="popup-overlay" id="infoPopup">
+    <div class="popup">
+      <div class="popup-header">
+        <h3 id="popupTitle">Character Info</h3>
+        <button class="ghost" onclick="closePopup('infoPopup')" aria-label="Close">✕</button>
+      </div>
+      <div class="popup-body" id="popupBody"></div>
+      <div class="popup-footer">
+        <button onclick="closePopup('infoPopup')">Dismiss</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Delete confirm popup ──────────────────────────────────────── -->
+  <div class="popup-overlay" id="deletePopup">
+    <div class="popup">
+      <div class="popup-header">
+        <h3>Confirm Deletion</h3>
+        <button class="ghost" onclick="closePopup('deletePopup')" aria-label="Close">✕</button>
+      </div>
+      <div class="popup-body" id="deleteBody"></div>
+      <div class="popup-footer">
+        <button onclick="closePopup('deletePopup')">Cancel</button>
+        <button class="danger" id="deleteConfirmBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Add Jedi popup ────────────────────────────────────────────── -->
+  <div class="popup-overlay" id="addJediPopup">
+    <div class="popup">
+      <div class="popup-header">
+        <h3>Add Jedi</h3>
+        <button class="ghost" onclick="closePopup('addJediPopup')">✕</button>
+      </div>
+      <div class="popup-body">
+        <form class="form-row" onsubmit="return false" style="flex-direction:column">
+          <div class="field">
+            <label for="newName">Name</label>
+            <input type="text" id="newName" placeholder="e.g. Ahsoka Tano">
+          </div>
+          <div class="field">
+            <label for="newEra">Era</label>
+            <select id="newEra">
+              <option>Clone Wars</option>
+              <option>Galactic Civil War</option>
+              <option>New Republic</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="popup-footer">
+        <button onclick="closePopup('addJediPopup')">Cancel</button>
+        <button class="primary" onclick="closePopup('addJediPopup')">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
