@@ -292,7 +292,13 @@ input:focus, select:focus {
   gap: 0.5rem;
 }
 
-/* ─── Theme toggle ───────────────────────────────────────────────── */
+/* ─── Theme controls ─────────────────────────────────────────────── */
+.theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .theme-toggle {
   display: flex;
   align-items: center;

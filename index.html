@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Star Wars — Galactic Registry</title>
-  <link rel="stylesheet" href="current-theme-dark.css">
-  <link rel="stylesheet" href="current-theme-light.css">
+  <link id="theme-dark"  rel="stylesheet" href="bauhaus-dark.css">
+  <link id="theme-light" rel="stylesheet" href="bauhaus-light.css">
   <link rel="stylesheet" href="core.css">
 </head>
 <body>
@@ -13,10 +13,13 @@
   <!-- ── Page header ─────────────────────────────────────────────── -->
   <header class="page-header">
     <h1>Galactic Registry</h1>
-    <div class="theme-toggle">
-      <span>Dark Side</span>
-      <button class="ghost" id="themeBtn" title="Toggle theme" style="font-size:1.1rem; padding:0.3em 0.5em;">☀️</button>
-      <span>Light Side</span>
+    <div class="theme-controls">
+      <select id="themePicker"></select>
+      <div class="theme-toggle">
+        <span>Dark</span>
+        <button class="ghost" id="themeBtn" title="Toggle dark/light" style="font-size:1.1rem; padding:0.3em 0.5em;">☀️</button>
+        <span>Light</span>
+      </div>
     </div>
   </header>
 

@@ -1,3 +1,57 @@
+// ─── Theme management ─────────────────────────────────────────────
+
+const FALLBACK_THEMES = [
+  { id: 'star-wars',        label: 'Star Wars' },
+  { id: 'bauhaus', label: 'Bauhaus' },
+];
+
+const linkDark  = document.getElementById('theme-dark');
+const linkLight = document.getElementById('theme-light');
+const picker    = document.getElementById('themePicker');
+
+function applyTheme(id) {
+  linkDark.href  = `${id}-dark.css`;
+  linkLight.href = `${id}-light.css`;
+  localStorage.setItem('theme-id', id);
+}
+
+function buildPicker(themes) {
+  const saved = localStorage.getItem('theme-id');
+  themes.forEach(({ id, label }) => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = label;
+    if (id === saved) opt.selected = true;
+    picker.appendChild(opt);
+  });
+  if (saved && themes.some(t => t.id === saved)) applyTheme(saved);
+}
+
+picker.addEventListener('change', () => applyTheme(picker.value));
+
+fetch('themes.json')
+  .then(r => r.json())
+  .then(buildPicker)
+  .catch(() => buildPicker(FALLBACK_THEMES));
+
+// ─── Dark / light toggle ──────────────────────────────────────────
+
+const themeBtn = document.getElementById('themeBtn');
+const savedVariant = localStorage.getItem('theme-variant');
+if (savedVariant === 'light') {
+  document.body.dataset.theme = 'light';
+  themeBtn.textContent = '🌙';
+}
+
+themeBtn.addEventListener('click', () => {
+  const isLight = document.body.dataset.theme === 'light';
+  document.body.dataset.theme = isLight ? '' : 'light';
+  themeBtn.textContent = isLight ? '☀️' : '🌙';
+  localStorage.setItem('theme-variant', isLight ? '' : 'light');
+});
+
+// ─── Popups ───────────────────────────────────────────────────────
+
 const charInfo = {
   'Luke Skywalker':    'Born on Polis Massa, raised on Tatooine. Trained by Obi-Wan Kenobi and Yoda. Destroyed the first Death Star. Redeemed his father Darth Vader. Later founded the New Jedi Order.',
   'Yoda':              'Grand Master of the Jedi Order for centuries. Known for his mastery of the Force and inverted syntax. Survived Order 66 and lived in exile on Dagobah.',
@@ -35,11 +89,4 @@ document.querySelectorAll('.popup-overlay').forEach(overlay => {
   overlay.addEventListener('click', e => {
     if (e.target === overlay) overlay.classList.remove('active');
   });
-});
-
-const themeBtn = document.getElementById('themeBtn');
-themeBtn.addEventListener('click', () => {
-  const isLight = document.body.dataset.theme === 'light';
-  document.body.dataset.theme = isLight ? '' : 'light';
-  themeBtn.textContent = isLight ? '☀️' : '🌙';
 });

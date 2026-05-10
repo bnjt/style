@@ -1,19 +1,21 @@
 /* ─── Font loading ───────────────────────────────────────────────── */
 @import url('https://fonts.cdnfonts.com/css/adamcg-pro');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Josefin+Sans:wght@400;600&family=Raleway:wght@400;600;700&display=swap');
 
 /* ─── Font palette ───────────────────────────────────────────────── */
 :root {
   --font-adam-cg-pro:  'ADAM.CG PRO', 'Futura', 'Century Gothic', sans-serif;
   --font-josefin-sans: 'Josefin Sans', 'Futura', 'Century Gothic', sans-serif;
+  --font-raleway:      'Raleway', 'Futura', 'Century Gothic', sans-serif;
   --font-palatino:     Palatino Linotype, Palatino, 'Book Antiqua', serif;
+  --font-comfortaa:    'Comfortaa', 'Century Gothic', sans-serif;
 }
 
 /* ─── Semantic font mappings ─────────────────────────────────────── */
 :root {
-  --theme-font-display:       var(--font-josefin-sans);
-  --theme-font-body:          var(--font-palatino);
-  --theme-font-ui:            var(--font-palatino);
+  --theme-font-display:       var(--font-raleway);
+  --theme-font-body:          var(--font-comfortaa);
+  --theme-font-ui:            var(--font-comfortaa);
   --theme-font-btn:           var(--font-josefin-sans);
   --theme-font-badge:         var(--font-adam-cg-pro);
   --theme-btn-text-transform: none;
