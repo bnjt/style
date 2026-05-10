@@ -49,9 +49,10 @@
   --theme-btn-border:    var(--color-dust);
   --theme-btn-hover-bg:  var(--color-dust);
 
-  --theme-btn-primary-bg:    var(--color-jedi-blue);
-  --theme-btn-primary-fg:    var(--color-white);
-  --theme-btn-primary-hover: var(--color-jedi-blue-dark);
+  --theme-btn-primary-bg:     var(--color-jedi-blue);
+  --theme-btn-primary-fg:     var(--color-white);
+  --theme-btn-primary-border: transparent;
+  --theme-btn-primary-hover:  var(--color-jedi-blue-dark);
 
   --theme-btn-danger-bg:     var(--color-sith-red);
   --theme-btn-danger-fg:     var(--color-white);
@@ -108,8 +109,9 @@
   --theme-btn-border:    #d1d5db;
   --theme-btn-hover-bg:  #d1d5db;
 
-  --theme-btn-primary-bg:    var(--color-jedi-blue);
-  --theme-btn-primary-hover: #2563eb;
+  --theme-btn-primary-bg:     var(--color-jedi-blue);
+  --theme-btn-primary-border: transparent;
+  --theme-btn-primary-hover:  #2563eb;
 
   --theme-btn-danger-bg:     var(--color-sith-red);
   --theme-btn-danger-hover:  #b91c1c;

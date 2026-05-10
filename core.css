@@ -176,7 +176,7 @@ button:hover, .btn:hover {
 button.primary {
   background: var(--theme-btn-primary-bg);
   color: var(--theme-btn-primary-fg);
-  border-color: transparent;
+  border-color: var(--theme-btn-primary-border);
 }
 button.primary:hover { background: var(--theme-btn-primary-hover); }
 
