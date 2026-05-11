@@ -232,7 +232,8 @@ select {
   transition: border-color 0.15s;
 }
 
-input::placeholder { color: var(--theme-input-placeholder); }
+input::placeholder,
+textarea::placeholder { color: var(--theme-input-placeholder); }
 
 input:focus, select:focus {
   outline: none;

@@ -37,11 +37,13 @@
   /* text — dark mode */
   --color-cream:            #E0D0BC;
   --color-cream-muted:      #8B7565;
+  --color-cream-ghost:      #3A4E62;
 
   /* text — light mode */
   --color-ink:              #16100A;
   --color-ink-mid:          #2E1E12;
   --color-ink-muted:        #6B4E3A;
+  --color-ink-ghost:        #C0B8B2;
 
   /* border */
   --color-navy:             #1C2B4A;
@@ -104,7 +106,7 @@
   --theme-input-fg:      var(--color-cream);
   --theme-input-border:  var(--color-amber);
   --theme-input-focus-border: var(--color-parchment);
-  --theme-input-placeholder: var(--color-cream-muted);
+  --theme-input-placeholder: var(--color-cream-ghost);
 
   --theme-popup-bg:      var(--color-navy);
   --theme-popup-fg:      var(--color-cream);
